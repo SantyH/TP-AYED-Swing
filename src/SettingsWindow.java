@@ -19,11 +19,18 @@ public class SettingsWindow {
         textSettings.setAlignmentX(Component.CENTER_ALIGNMENT);
         textSettings.setAlignmentY(Component.TOP_ALIGNMENT);
         panelSettings.add(textSettings);
-
+*/
+        /**
+         * Panel de sonido
+         */
 
         JPanel panelSettingsSound = new JPanel();
-        panelSettingsSound.setLayout(new BoxLayout(panelSettings, BoxLayout.PAGE_AXIS));
-        frameSetting.add(panelSettings);
+        panelSettingsSound.setLayout(new FlowLayout());
+        panelSettings.add(panelSettingsSound);
+
+        /**
+         *  Botones de sonido
+         */
 
         JLabel textSound = new JLabel("Sound: ");
         panelSettingsSound.add(textSound);
@@ -40,6 +47,17 @@ public class SettingsWindow {
         panelSettingsSound.add(offSoundButton);
         panelSettingsSound.setLayout(new BoxLayout(panelSettingsSound,BoxLayout.LINE_AXIS));
 
+        /**
+         * Panel de musica
+         */
+
+        JPanel panelSettingsMusic = new JPanel();
+        panelSettingsMusic.setLayout(new FlowLayout());
+        panelSettings.add(panelSettingsMusic);
+
+        /**
+         * Botones de musica
+         */
         ButtonGroup musicButtonGroup = new ButtonGroup();
 
         JRadioButton onMusicButton = new JRadioButton("ON");
@@ -48,8 +66,9 @@ public class SettingsWindow {
         JRadioButton offMusicButton = new JRadioButton("OFF", true);
         musicButtonGroup.add(offMusicButton);
 
-        panelSettings.add(onMusicButton);
-        panelSettings.add(offMusicButton);
+        panelSettingsMusic.add(onMusicButton);
+        panelSettingsMusic.add(offMusicButton);
+
 
 
         JButton backButton = new JButton("Back");
