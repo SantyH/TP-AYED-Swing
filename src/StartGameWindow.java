@@ -18,11 +18,11 @@ public class StartGameWindow {
         panel.add(image,BorderLayout.CENTER);
 
         JButton backButton = new JButton("Back");
-        backButton.addActionListener(new ALBackButton(true)); //Como es True, oculta la ventana StartGameWindow
+        backButton.addActionListener(new ALBackButton(true)); //It is true, so it hides the StartGameWindow
 
         panel.add(backButton,BorderLayout.PAGE_END);
 
-        startGameFrame.setLocationRelativeTo(null);//centrado en pantalla
+        startGameFrame.setLocationRelativeTo(null);//aligned to the center of the screen
         startGameFrame.setVisible(false);//visible
         startGameFrame.pack();
 

@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 /**
  * Created by Lucas on 6/3/2017.
@@ -8,6 +9,9 @@ public class SettingsWindow {
     public static JFrame frame;
 
     public static void createSettingsWindow(){
+
+        ActionListener ac = new ALSettingState();
+
         JFrame frameSetting = new JFrame("Settings");
         frameSetting.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -21,7 +25,7 @@ public class SettingsWindow {
         panelSettings.add(textSettings);
 
         /**
-         * Panel de sonido.
+         * Sound panel.
          */
 
         JPanel panelSettingsSound = new JPanel();
@@ -29,7 +33,7 @@ public class SettingsWindow {
         panelSettings.add(panelSettingsSound);
 
         /**
-         *  Botones de sonido
+         *  Sound buttons
          */
 
         JLabel textSound = new JLabel("Sound: ");
@@ -38,9 +42,13 @@ public class SettingsWindow {
         ButtonGroup soundButtonGroup = new ButtonGroup();
 
         JRadioButton onSoundButton = new JRadioButton("ON",true);
+        onSoundButton.setActionCommand("0"); // int = 0 identifies the sound button
+        onSoundButton.addActionListener(ac);
         soundButtonGroup.add(onSoundButton);
 
         JRadioButton offSoundButton = new JRadioButton("OFF");
+        offSoundButton.setActionCommand("0"); // int = 0 identifies the sound button
+        offSoundButton.addActionListener(ac);
         soundButtonGroup.add(offSoundButton);
 
         panelSettingsSound.add(onSoundButton);
@@ -48,7 +56,7 @@ public class SettingsWindow {
 
 
         /**
-         * Panel de musica
+         * Music panel
          */
 
         JPanel panelSettingsMusic = new JPanel();
@@ -56,7 +64,7 @@ public class SettingsWindow {
         panelSettings.add(panelSettingsMusic);
 
         /**
-         * Botones de musica.
+         * Music buttons.
          */
 
         JLabel musicText = new JLabel("Music: ");
@@ -65,16 +73,20 @@ public class SettingsWindow {
         ButtonGroup musicButtonGroup = new ButtonGroup();
 
         JRadioButton onMusicButton = new JRadioButton("ON");
+        onMusicButton.setActionCommand("1"); // int = 1 identifies the sound button
+        onMusicButton.addActionListener(ac);
         musicButtonGroup.add(onMusicButton);
 
         JRadioButton offMusicButton = new JRadioButton("OFF", true);
+        offMusicButton.setActionCommand("1"); // int = 1 identifies the sound button
+        offMusicButton.addActionListener(ac);
         musicButtonGroup.add(offMusicButton);
 
         panelSettingsMusic.add(onMusicButton);
         panelSettingsMusic.add(offMusicButton);
 
         /**
-         * Panel Grafico
+         * Graphics panel
          */
 
         JPanel panelSettingsGraphics = new JPanel(new BorderLayout());
@@ -85,13 +97,17 @@ public class SettingsWindow {
         textGraphic.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         /**
-         * Botones checkBox de los graficos.
+         * Graphics buttons.
          */
 
         JCheckBox shadowsCheckBox = new JCheckBox("Shadows");
+        shadowsCheckBox.setActionCommand("2"); // int = 2 identifies the sound button
+        shadowsCheckBox.addActionListener(ac);
         panelSettingsGraphics.add(shadowsCheckBox,BorderLayout.LINE_START);
 
         JCheckBox antiAlisingCheckBox = new JCheckBox("Anti-Alising");
+        antiAlisingCheckBox.setActionCommand("3"); // int = 3 identifies the sound button
+        antiAlisingCheckBox.addActionListener(ac);
         panelSettingsGraphics.add(antiAlisingCheckBox,BorderLayout.LINE_END);
 
         /**

@@ -43,7 +43,7 @@ public class MainMenuWindow{
         panel.add(exitButton);
 
 
-        frameMainMenu.setLocationRelativeTo(null);//centrado en pantalla
+        frameMainMenu.setLocationRelativeTo(null);//aligned to the center of the screen
         frameMainMenu.setVisible(true);//visible
         frameMainMenu.pack();
 
