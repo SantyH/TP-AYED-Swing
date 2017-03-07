@@ -32,27 +32,27 @@ public class ALSettingState implements ActionListener {
     //This method prints the state of all the buttons any time a button is pressed
     void printState(){
         if(soundState){
-            System.out.println("Sound ON");
+            System.out.println("Sound: ON");
         }else{
-            System.out.println("Sound OFF");
+            System.out.println("Sound: OFF");
         }
 
         if(musicState){
-            System.out.println("Music ON");
+            System.out.println("Music: ON");
         }else{
-            System.out.println("Music OFF");
+            System.out.println("Music: OFF");
         }
 
         if(shadowsState){
-            System.out.println("Shadows ON");
+            System.out.println("Shadows: ON");
         }else{
-            System.out.println("Shadows OFF");
+            System.out.println("Shadows: OFF");
         }
 
         if(antiAlisingState){
-            System.out.println("Anti-alising ON");
+            System.out.println("Anti-alising: ON");
         }else{
-            System.out.println("Anti-alising OFF");
+            System.out.println("Anti-alising: OFF");
         }
         System.out.println("");
     }

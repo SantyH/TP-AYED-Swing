@@ -13,6 +13,7 @@ public class SettingsWindow {
         ActionListener ac = new ALSettingState();
 
         JFrame frameSetting = new JFrame("Settings");
+        frameSetting.setResizable(false);
         frameSetting.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panelSettings = new JPanel();
@@ -115,12 +116,14 @@ public class SettingsWindow {
          */
 
         JButton backButton = new JButton("Back");
+        backButton.setSize(100, 30);
+        backButton.setMaximumSize(backButton.getSize());
         backButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        backButton.addActionListener(new ALBackButton(false));//Como es false, oculta la SettingsWindow
+        backButton.addActionListener(new ALBackButton(false));//It is false, so it hides the SettingsWindow
         panelSettings.add(backButton);
 
-        frameSetting.setLocationRelativeTo(null);//centrado en pantalla
-        frameSetting.setVisible(false);//no visible
+        frameSetting.setLocationRelativeTo(null);//aligned to the center of the screen
+        frameSetting.setVisible(false);//not visible
         frameSetting.pack();
 
         frame=frameSetting;

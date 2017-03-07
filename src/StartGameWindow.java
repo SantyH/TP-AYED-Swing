@@ -8,6 +8,7 @@ public class StartGameWindow {
     static JFrame frame;
     public static void createStartGameWindow() {
         JFrame startGameFrame = new JFrame("Start Game");
+        startGameFrame.setResizable(false);
         startGameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
@@ -18,6 +19,8 @@ public class StartGameWindow {
         panel.add(image,BorderLayout.CENTER);
 
         JButton backButton = new JButton("Back");
+        backButton.setSize(100, 30);
+        backButton.setMaximumSize(backButton.getSize());
         backButton.addActionListener(new ALBackButton(true)); //It is true, so it hides the StartGameWindow
 
         panel.add(backButton,BorderLayout.PAGE_END);
