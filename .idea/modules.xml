@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tp Swing.iml" filepath="$PROJECT_DIR$/Tp Swing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TpSwing.iml" filepath="$PROJECT_DIR$/.idea/TpSwing.iml" />
     </modules>
   </component>
 </project>

@@ -11,16 +11,16 @@ public class StartGameWindow {
         startGameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+        panel.setLayout(new BorderLayout());
         startGameFrame.add(panel);
 
-        JLabel image = new JLabel();
-        panel.add(image);
+        JLabel image = new JLabel(new ImageIcon("gta_1.jpg"));
+        panel.add(image,BorderLayout.CENTER);
 
         JButton backButton = new JButton("Back");
-        backButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         backButton.addActionListener(new ALBackButton(true)); //Como es True, oculta la ventana StartGameWindow
-        panel.add(backButton);
+
+        panel.add(backButton,BorderLayout.PAGE_END);
 
         startGameFrame.setLocationRelativeTo(null);//centrado en pantalla
         startGameFrame.setVisible(false);//visible

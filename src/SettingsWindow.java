@@ -19,9 +19,9 @@ public class SettingsWindow {
         textSettings.setAlignmentX(Component.CENTER_ALIGNMENT);
         textSettings.setAlignmentY(Component.TOP_ALIGNMENT);
         panelSettings.add(textSettings);
-*/
+
         /**
-         * Panel de sonido
+         * Panel de sonido.
          */
 
         JPanel panelSettingsSound = new JPanel();
@@ -45,7 +45,7 @@ public class SettingsWindow {
 
         panelSettingsSound.add(onSoundButton);
         panelSettingsSound.add(offSoundButton);
-        panelSettingsSound.setLayout(new BoxLayout(panelSettingsSound,BoxLayout.LINE_AXIS));
+
 
         /**
          * Panel de musica
@@ -56,8 +56,12 @@ public class SettingsWindow {
         panelSettings.add(panelSettingsMusic);
 
         /**
-         * Botones de musica
+         * Botones de musica.
          */
+
+        JLabel musicText = new JLabel("Music: ");
+        panelSettingsMusic.add(musicText);
+
         ButtonGroup musicButtonGroup = new ButtonGroup();
 
         JRadioButton onMusicButton = new JRadioButton("ON");
@@ -69,7 +73,30 @@ public class SettingsWindow {
         panelSettingsMusic.add(onMusicButton);
         panelSettingsMusic.add(offMusicButton);
 
+        /**
+         * Panel Grafico
+         */
 
+        JPanel panelSettingsGraphics = new JPanel(new BorderLayout());
+        panelSettings.add(panelSettingsGraphics);
+
+        JLabel textGraphic = new JLabel("Graphics: ");
+        panelSettingsGraphics.add(textGraphic,BorderLayout.PAGE_START);
+        textGraphic.setAlignmentX(Component.LEFT_ALIGNMENT);
+
+        /**
+         * Botones checkBox de los graficos.
+         */
+
+        JCheckBox shadowsCheckBox = new JCheckBox("Shadows");
+        panelSettingsGraphics.add(shadowsCheckBox,BorderLayout.LINE_START);
+
+        JCheckBox antiAlisingCheckBox = new JCheckBox("Anti-Alising");
+        panelSettingsGraphics.add(antiAlisingCheckBox,BorderLayout.LINE_END);
+
+        /**
+         * Back Button.
+         */
 
         JButton backButton = new JButton("Back");
         backButton.setAlignmentX(Component.CENTER_ALIGNMENT);
