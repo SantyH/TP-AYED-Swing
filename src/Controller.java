@@ -127,7 +127,7 @@ class ALSettingState implements ActionListener {
         }else{
             System.out.println("Anti-alising: Off");
         }
-        System.out.println("");
+        System.out.println("-----------------");
     }
 
 }

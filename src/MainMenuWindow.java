@@ -50,10 +50,11 @@ public class MainMenuWindow{
         panel.add(exitButton);
 
 
-        frameMainMenu.setLocationRelativeTo(null);//aligned to the center of the screen
+
         frameMainMenu.setVisible(true);//visible
         frameMainMenu.pack();
         frameMainMenu.setSize(250, 150);
+        frameMainMenu.setLocationRelativeTo(null);//aligned to the center of the screen
 
         frame=frameMainMenu;
     }

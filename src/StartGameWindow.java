@@ -21,13 +21,17 @@ public class StartGameWindow {
         JButton backButton = new JButton("Back");
         backButton.setSize(100, 30);
         backButton.setMaximumSize(backButton.getSize());
+        JPanel flowPanel = new JPanel(new FlowLayout());
+        flowPanel.add(backButton);
+        panel.add(BorderLayout.PAGE_END, flowPanel);
         backButton.addActionListener(new ALBackButton(true)); //It is true, so it hides the StartGameWindow
 
-        panel.add(backButton,BorderLayout.PAGE_END);
+        //panel.add(backButton,BorderLayout.PAGE_END);
 
-        startGameFrame.setLocationRelativeTo(null);//aligned to the center of the screen
+
         startGameFrame.setVisible(false);//visible
         startGameFrame.pack();
+        startGameFrame.setLocationRelativeTo(null);//aligned to the center of the screen
 
         frame=startGameFrame;
     }

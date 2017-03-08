@@ -122,9 +122,11 @@ public class SettingsWindow {
         backButton.addActionListener(new ALBackButton(false));//It is false, so it hides the SettingsWindow
         panelSettings.add(backButton);
 
-        frameSetting.setLocationRelativeTo(null);//aligned to the center of the screen
+
         frameSetting.setVisible(false);//not visible
         frameSetting.pack();
+        frameSetting.setSize(200, 200);
+        frameSetting.setLocationRelativeTo(null);//aligned to the center of the screen
 
         frame=frameSetting;
     }
